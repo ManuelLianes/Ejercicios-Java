@@ -1,3 +1,5 @@
+package Capitulo2;
+
 /**
  * Restaurante
  */

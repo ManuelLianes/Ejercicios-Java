@@ -1,5 +1,4 @@
-package ejercicios;
-import ejercicios.Temperatura;
+package Capitulo2;
 
 /**
  * TemperaturaPrueva

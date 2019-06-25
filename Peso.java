@@ -1,5 +1,4 @@
-package ejercicios;
-
+package Capitulo2;
 /**
  * Peso
  */
