@@ -1,7 +1,5 @@
 package Capitulo3;
 
-import java.math.*;
-
 /**
  * RaizPositivo
  * calcula la raiz cuadrada de un numero si este es positivo

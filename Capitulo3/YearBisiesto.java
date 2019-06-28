@@ -12,7 +12,6 @@ public class YearBisiesto {
      * @param year
      * @return true si es bisiesto
      */
-
     boolean isBisiesto(int year){
         boolean flag = false;
         if (year % 4 == 0) { flag = true;}
