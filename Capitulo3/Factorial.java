@@ -26,5 +26,6 @@ public class Factorial {
         }
         
         System.out.println("\n\nEl factorial de " + aux + " es " + suma);
-    }
+        consola.close();
+    }    
 }

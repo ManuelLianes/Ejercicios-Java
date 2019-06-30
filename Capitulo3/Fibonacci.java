@@ -21,5 +21,6 @@ public class Fibonacci {
             n1 = n2;
             n2 = suma;
         }
+        consola.close();
     }
 }
