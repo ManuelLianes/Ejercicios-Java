@@ -59,4 +59,35 @@ public class MiNumero {
         }
         System.out.println("");
     }
+
+    boolean isPrimo(){
+        boolean primo = true;
+        int divisor = 2;
+
+        while ((primo) && (n > divisor)){
+            if (n % divisor == 0) {
+                primo = false;
+            }
+            divisor++;
+        }
+        return primo;
+    }
+    
+    boolean isOmirps(){
+        boolean flag = false;
+        int resto;
+        int invertido = 0;
+        int aux = n;
+
+        while (n > 0) {
+            resto = n % 10;
+            invertido = invertido * 10 + resto;
+            n = n / 10;
+            //System.out.println("Bug. " + n + " " + resto + " " + invertido);
+        }
+        n = invertido;
+        if (this.isPrimo()) {flag = true; }
+        n = aux;
+        return flag;
+    }
 }
