@@ -83,8 +83,8 @@ public class MiNumero {
             resto = n % 10;
             invertido = invertido * 10 + resto;
             n = n / 10;
-            //System.out.println("Bug. " + n + " " + resto + " " + invertido);
         }
+        
         n = invertido;
         if (this.isPrimo()) {flag = true; }
         n = aux;
