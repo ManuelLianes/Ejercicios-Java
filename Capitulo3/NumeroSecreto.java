@@ -25,5 +25,6 @@ public class NumeroSecreto {
             intentos++;
         }
         System.out.println("Acertastes... tras " + intentos + " intentos...");
+        consola.close();
     }
 }
