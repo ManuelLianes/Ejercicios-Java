@@ -90,4 +90,8 @@ public class MiNumero {
         n = aux;
         return flag;
     }
+
+    int getNRandom(){
+        return (int) (Math.random() * 100);
+    }
 }
