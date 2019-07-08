@@ -11,6 +11,34 @@ public class CalculaEdad {
     private int birthYear, birthMonth, birthDay;
     private int ageYears, ageMonths, ageDays;
 
+    // Constructor
+    void calculaEdad(String cadena){
+        String[] sNacimiento = new String[3];
+        sNacimiento = cadena.split("/");
+        setBirthDay(Integer.valueOf(sNacimiento[0]));
+        setAgeDays();
+        setBirthMonth(Integer.valueOf(sNacimiento[1]));
+        setAgeMonths();
+        setBirthYear(Integer.valueOf(sNacimiento[2]));
+        setAgeYears();
+    }
+    
+    boolean isMayor65(){
+        boolean flag = false;
+        if(getAgeYears() >= 65) {
+            flag = true;
+        }
+        return flag;
+    }
+
+    boolean isMenor25(){
+        boolean flag = false;
+        if(getAgeYears() <= 25) {
+            flag = true;
+        }
+        return flag;
+    }
+
     // Seters y Geters
     void setBirthYear(int intYear){
         birthYear = intYear;
@@ -37,7 +65,7 @@ public class CalculaEdad {
     }
 
     void setAgeYears(){
-        int actualYear = fecha.get(fecha.YEAR);
+        int actualYear = fecha.get(GregorianCalendar.YEAR);
         if (birthYear >= actualYear) {
             ageYears = actualYear - birthYear;
         } else ageYears = actualYear - birthYear - 1;
@@ -48,7 +76,7 @@ public class CalculaEdad {
     }
 
     void setAgeMonths(){
-        int actualMonth = fecha.get(fecha.MONTH);
+        int actualMonth = fecha.get(GregorianCalendar.MONTH);
         //int monthsUntilNextYear = 12 - actualMonth;
 
         if (birthMonth >= actualMonth) {
@@ -61,7 +89,7 @@ public class CalculaEdad {
     }
 
     void setAgeDays(){
-        int actualDay = fecha.get(fecha.DAY_OF_MONTH);
+        int actualDay = fecha.get(GregorianCalendar.DAY_OF_MONTH);
         int daysInBirthMonth = 30;
         int daysUntilNextMotn = (daysInBirthMonth - birthDay);
 
